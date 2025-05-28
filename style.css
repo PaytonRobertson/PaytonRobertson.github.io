@@ -63,6 +63,10 @@ main {
     flex: 1;
     padding: 15px;
 }
+
+.content li {
+    font-size: 23px
+}
 /* interests section styles */
 #interests {
     border: 4px rgb(43, 53, 42) ridge;
