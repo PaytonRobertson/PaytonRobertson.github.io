@@ -417,7 +417,7 @@ function playerFrictionAndGravity() {
 function drawPlatforms() {
   platforms.forEach((platform) => {
     const { color, x, y, width, height } = platform;
-    ctx.fillStyle = color;
+    ctx.fillStyle = "#202020";
     ctx.fillRect(x, y, width, height);
   });
 }

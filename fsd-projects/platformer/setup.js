@@ -96,6 +96,7 @@ var collectableList = {
   diamond: { image: "images/collectables/diamond-head.png" },
   grace: { image: "images/collectables/grace-head.png" },
   kennedi: { image: "images/collectables/kennedi-head.png" },
-  ws: { image: "images/collectables/ws-head.png" },
   steve: { image: "images/collectables/steve-head.png" },
+   witherSkull: { image: "images/collectables/witherSkull.png" },
+    soulSand: { image: "images/collectables/soulSand.png" },
 };

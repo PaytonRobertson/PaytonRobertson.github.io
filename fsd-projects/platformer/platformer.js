@@ -27,7 +27,7 @@ $(function () {
     //////////////////////////////////
 
     // TODO 1 - Enable the Grid
-     toggleGrid();
+     //toggleGrid();
 
 
     // TODO 2 - Create Platforms
@@ -45,11 +45,11 @@ createPlatform(200, 400, 100, 20);
 
 
     // TODO 3 - Create Collectables
-createCollectable("steve", 300, 560, 0.5);
-createCollectable("max", 650, 350, 0.5);
-createCollectable("max", 750, 150, 0.5);
-createCollectable("steve", 1050, 447, 0.5);
-createCollectable("max", 120, 500, 0.5);
+createCollectable("witherSkull", 300, 560, 0.5);
+createCollectable("witherSkull", 650, 350, 0.5);
+createCollectable("soulSand", 750, 150, 0.5);
+createCollectable("soulSand", 1050, 447, 0.5);
+createCollectable("witherSkull", 120, 500, 0.5);
 
 
     
@@ -59,7 +59,8 @@ createCannon("bottom", 710, 2500);
 createCannon("left", 220, 1995);
 createCannon("bottom", 1050, 2053);
 createCannon("right", 150, 1500);    
-    //////////////////////////////////
+   
+//////////////////////////////////
     // ONLY CHANGE ABOVE THIS POINT //
     //////////////////////////////////
   }
