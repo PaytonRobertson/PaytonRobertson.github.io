@@ -21,18 +21,29 @@ var init = function (window) {
         
         // TODO 1 : Declare and initialize our variables
 
+        var circle; // variable to hold a single circle when creating circles / iterating
+var circles = []; // variable to store all circles in an array
 
 
         // TODO 2 : Create a function that draws a circle 
         
+        function drawCircle() {
+          circle = draw.randomCircleInArea(canvas, true, true, "#999", 2); // draws circle
+         physikz.addRandomVelocity(circle, canvas, 5, 5); // adds velocity to cirle
+         view.addChild(circle); // adds circle to view
+        circles.push(circle);  // adds circle to array
+    }
 
 
         // TODO 3 : Call the drawCircle() function
-
+           
 
 
         // TODO 7 : Use a loop to create multiple circles
 
+        for (var i = 0; i < 100; i++) {
+            drawCircle(); // creates more circles
+}
 
 
 
@@ -47,13 +58,19 @@ var init = function (window) {
         */
         function update() {
             // TODO 4 : Update the position of each circle using physikz.updatePosition()
-
+                
+                
             
             // TODO 5 : Call game.checkCirclePosition() on your circles
-           
+
+                 
+                
 
             // TODO 8 / TODO 9 : Iterate over the array
-           
+           for (var i = 0; i < circles.length; i++) { // creates loop for all circle instead of hardcoding
+            game.checkCirclePosition(circles[i]); // changes hardcode
+            physikz.updatePosition(circles[i]); // changes hardcode
+}
             
         }
     
@@ -70,7 +87,13 @@ var init = function (window) {
             }
             
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
-            
+              else if ( circle.x < 0 ) {
+                circle.x = canvas.width; // makes circles pop up on right screen when gone from left
+            }  else if ( circle.y < 0) {
+                circle.y = canvas.height; // circles pop up on bottom when gone past top
+            }  else if ( circle.y > canvas.height ) {
+                circle.y = 0;  // circles pop up on top when gone past bottom
+            }
 
 
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
