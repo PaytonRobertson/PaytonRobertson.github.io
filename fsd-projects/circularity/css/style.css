@@ -1,0 +1,10 @@
+body{
+         background:url("img/Musicbg.jpg") center no-repeat;
+        background-color: black;
+        -webkit-backgroud-size: cover;
+        -moz-backgroud-size: cover;
+        -o-backgroud-size: cover;
+       background-size: cover;
+         
+         
+}

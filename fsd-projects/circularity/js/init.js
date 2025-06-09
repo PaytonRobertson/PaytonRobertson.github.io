@@ -14,6 +14,7 @@ var init = function (window) {
         
         window.opspark.game = {};
         var game = window.opspark.game;
+    
         
         ///////////////////
         // PROGRAM SETUP //
@@ -41,7 +42,7 @@ var circles = []; // variable to store all circles in an array
 
         // TODO 7 : Use a loop to create multiple circles
 
-        for (var i = 0; i < 100; i++) {
+        for (var i = 0; i < 300; i++) {
             drawCircle(); // creates more circles
 }
 
