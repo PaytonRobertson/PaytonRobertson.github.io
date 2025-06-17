@@ -15,9 +15,13 @@ var makeLevelData = function (window) {
         number: 1,
         speed: -3,
         gameItems: [
-          { type: "sawblade", x: 400, y: groundY },
-          { type: "sawblade", x: 600, y: groundY },
-          { type: "sawblade", x: 900, y: groundY },
+          { type: "sawblade", x: 400, y: groundY - 110, damage: 35, image: "img/fire.png"},
+          { type: "sawblade", x: 750, y: groundY - 160, damage: 35, image: "img/fire.png"},
+          { type: "sawblade", x: 1500, y: groundY - 130, damage: 35, image: "img/fire.png"},
+          { type: "enemy", x: 500, y: groundY - 50, speed: -3, image: "img/alien.cat.png", offsetX: -50, offsetY: -25, scale: 0.5},
+          { type: "enemy", x: 1100, y: groundY - 50, speed: -2, image: "img/alien.cat.png", offsetX: 900, offsetY: -25, scale: 0.5},
+          { type: "reward", x: 700, y: groundY - 120, speed: 10, image: "img/heart.png"},
+          { type: "marker", x: 2500, y: groundY - 75, speed: -3},
         ],
       },
       {

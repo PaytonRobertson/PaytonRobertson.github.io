@@ -29,7 +29,7 @@ var background = function (window) {
         // ANIMATION VARIABLES HERE //////////////////////////////////////
         //////////////////////////////////////////////////////////////////
         // TODO (several):
-        var tree;
+        var ship;
         var buildings = []
       
         // called at the start of game and whenever the page is resized
@@ -70,10 +70,12 @@ var background = function (window) {
             }
             
             // TODO 3: Part 1 - Add a tree
-            tree = draw.bitmap("img/tree.png");
-            tree.x = 300;
-            tree.y = groundY - 225;
-            background.addChild(tree);
+            ship = draw.bitmap("img/Alien.ship.png");
+            ship.scaleX = 1;
+            ship.scaleY = 1;
+            ship.x = 300;
+            ship.y = groundY - 470;
+            background.addChild(ship);
             
         } // end of render function - DO NOT DELETE
         
@@ -87,10 +89,10 @@ var background = function (window) {
             var groundY = ground.y;
             
             // TODO 3: Part 2 - Move the tree!
-            tree.x = tree.x - 5;
+            ship.x = ship.x - 5;
 
-            if (tree.x < -200) {
-            tree.x = canvasWidth;
+            if (ship.x < -200) {
+            ship.x = canvasWidth;
             }
 
             // TODO 4: Part 2 - Parallax
