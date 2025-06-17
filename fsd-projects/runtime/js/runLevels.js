@@ -14,7 +14,7 @@ var runLevels = function (window) {
     var levelData = window.opspark.levelData;
 
     // set this to true or false depending on if you want to see hitzones
-    game.setDebugMode(true);
+    game.setDebugMode(false);
 
     // TODOs 5 through 11 go here
     // BEGIN EDITING YOUR CODE HERE
@@ -75,11 +75,13 @@ var runLevels = function (window) {
         };
     }
 
-    function createMarker(x, y, speed){
+    function createMarker(x, y, speed, image){
         var Marker = game.createGameItem("Marker", 25);
-        var greenSquare = draw.rect(50, 50, "green");
-        greenSquare.x = -25;
-        greenSquare.y = -25;
+        var greenSquare = draw.bitmap(image);
+        greenSquare.scaleX = .45
+        greenSquare.scaleY = .45
+        greenSquare.x = -55;
+        greenSquare.y = -55;
         Marker.addChild(greenSquare);
         Marker.x = x;
         Marker.y = y;
@@ -91,6 +93,7 @@ var runLevels = function (window) {
           startLevel();
         };
     }
+
     
 
   // function calls 
@@ -117,7 +120,7 @@ var runLevels = function (window) {
         }
 
          if(element.type === "marker"){
-          createMarker(element.x, element.y, element.speed)
+          createMarker(element.x, element.y, element.speed, element.image)
         }
       }
       //////////////////////////////////////////////

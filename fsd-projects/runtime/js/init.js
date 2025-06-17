@@ -41,6 +41,16 @@ var init = function (window) {
   help.y = ground.y + ground.getBounds().height + 10;
   view.addChild(help);
 
+  var goal = draw.textfield(
+    "Kill the aliens and save the world!",
+    "60px Arial",
+    "green",
+    "top"
+  );
+  goal.x = 10;
+  goal.y = ground.y + ground.getBounds().height + -455;
+  view.addChild(goal);
+
   window.opspark.makeSpriteSheet(data).then(function (ss) {
     spritesheet = ss;
     halle = window.opspark.makeHalle(
