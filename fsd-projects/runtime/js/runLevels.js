@@ -60,8 +60,8 @@ var runLevels = function (window) {
     function createReward(x, y, speed, image){
         var Reward = game.createGameItem("Reward", 25);
         var blueSquare = draw.bitmap(image);
-        blueSquare.scaleX = .20
-        blueSquare.scaleY = .20
+        blueSquare.scaleX = .27
+        blueSquare.scaleY = .27
         blueSquare.x = -50;
         blueSquare.y = -50;
         Reward.addChild(blueSquare);
